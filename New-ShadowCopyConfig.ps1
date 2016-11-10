@@ -43,6 +43,8 @@ Begin
     }
 Process
     {
+    # Try - Do I wrap the whole thing in a try based on the success or failure of the 
+    # new CIMSession? or catch right away and do a throw?  I think the latter.
     $cs = New-CimSession -ComputerName $ComputerName
     $Volumes = Get-CimInstance -Class Win32_Volume -CimSession $cs
 
